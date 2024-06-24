@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Me",
+  "classifications": ["Common", "Code"],
+  "identity": "ExampleTemplate.NameCasing",
+  "name": "Example templates: name casing",
+  "shortName": "namecasing",
+  "tags": {
+    "language": "md",
+    "type": "item"
+  },
+  "symbols": {
+    "Name": {
+      "datatype": "text",
+      "defaultValue": "AdatumCorporation",
+      "description": "The name to case in different casing styles",
+      "replaces": "OriginalName",
+      "type": "parameter"
+    },
+    "NameAsSnakeCase": {
+      "datatype": "text",
+      "description": "The name in snake_case",
+      "fileRename": "name_as_snake_case",
+      "replaces": "name_as_snake_case",
+      "type": "derived",
+      "valueSource": "Name",
+      "valueTransform": "snake_cased"
+    }
+  },
+  "forms": {
+    "snake_cased": {
+        "identifier": "chain",
+        "steps": ["underscoreBetweenLowercaseAndUpperCaseLetter", "lowerCase"]
+    },
+    "underscoreBetweenLowercaseAndUpperCaseLetter": {
+      "identifier": "replace",
+      "pattern": "([a-z])([A-Z])",
+      "replacement": "$1_$2"
+    },
+    "lowerCased": {
+        "identifier": "lowerCase"
+    }    
+  }
+}
