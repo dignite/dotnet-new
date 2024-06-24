@@ -15,3 +15,10 @@ This is a demo to show how the name parameter can be cased with different styles
 - snake_case: snake_cased_name_as_snake_case
 - kebab-case: snake-cased-name-as-kebab-case
 - PascalCase: SnakeCasedNameAsPascalCase
+
+# KebabCasedName
+
+- Original: OriginalKebabCasedName
+- snake_case: kebab_cased_name_as_snake_case
+- kebab-case: kebab-cased-name-as-kebab-case
+- PascalCase: KebabCasedNameAsPascalCase

@@ -75,6 +75,39 @@
       "type": "derived",
       "valueSource": "SnakeCasedName",
       "valueTransform": "PascalCased"
+    },
+    "KebabCasedName": {
+      "datatype": "text",
+      "defaultValue": "excellent-kebab",
+      "replaces": "OriginalKebabCasedName",
+      "type": "parameter"
+    },
+    "KebabCasedNameAsSnakeCase": {
+      "datatype": "text",
+      "description": "The name in snake_case",
+      "fileRename": "kebab_cased_name_as_snake_case",
+      "replaces": "kebab_cased_name_as_snake_case",
+      "type": "derived",
+      "valueSource": "KebabCasedName",
+      "valueTransform": "snake_cased"
+    },
+    "KebabCasedNameAsKebabCase": {
+      "datatype": "text",
+      "description": "The name in kebab-case",
+      "fileRename": "kebab-cased-name-as-kebab-case",
+      "replaces": "kebab-cased-name-as-kebab-case",
+      "type": "derived",
+      "valueSource": "KebabCasedName",
+      "valueTransform": "kebab-cased"
+    },
+    "KebabCasedNameAsPascalCase": {
+      "datatype": "text",
+      "description": "The name in PascalCase",
+      "fileRename": "KebabCasedNameAsPascalCase",
+      "replaces": "KebabCasedNameAsPascalCase",
+      "type": "derived",
+      "valueSource": "KebabCasedName",
+      "valueTransform": "PascalCased"
     }
   },
   "forms": {
