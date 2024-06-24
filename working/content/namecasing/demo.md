@@ -4,3 +4,4 @@ This is a demo to show how the name parameter can be cased with different styles
 
 - Original: OriginalName
 - snake_case: name_as_snake_case
+- kebab-case: name-as-kebab-case
