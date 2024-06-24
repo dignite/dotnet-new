@@ -10,40 +10,52 @@
     "type": "item"
   },
   "symbols": {
-    "Name": {
+    "PascalCasedName": {
       "datatype": "text",
       "defaultValue": "AdatumCorporation",
-      "description": "The name to case in different casing styles",
-      "replaces": "OriginalName",
+      "replaces": "OriginalPascalCasedName",
       "type": "parameter"
     },
-    "NameAsSnakeCase": {
+    "PascalCasedNameAsSnakeCase": {
       "datatype": "text",
       "description": "The name in snake_case",
-      "fileRename": "name_as_snake_case",
-      "replaces": "name_as_snake_case",
+      "fileRename": "pascal_cased_name_as_snake_case",
+      "replaces": "pascal_cased_name_as_snake_case",
       "type": "derived",
-      "valueSource": "Name",
+      "valueSource": "PascalCasedName",
       "valueTransform": "snake_cased"
     },
-    "NameAsKebabCase": {
+    "PascalCasedNameAsKebabCase": {
       "datatype": "text",
       "description": "The name in kebab-case",
-      "fileRename": "name-as-kebab-case",
-      "replaces": "name-as-kebab-case",
+      "fileRename": "pascal-cased-name-as-kebab-case",
+      "replaces": "pascal-cased-name-as-kebab-case",
       "type": "derived",
-      "valueSource": "Name",
+      "valueSource": "PascalCasedName",
       "valueTransform": "kebab-cased"
+    },
+    "PascalCasedNameAsPascalCase": {
+      "datatype": "text",
+      "description": "The name in PascalCase",
+      "fileRename": "PascalCasedNameAsPascalCase",
+      "replaces": "PascalCasedNameAsPascalCase",
+      "type": "derived",
+      "valueSource": "PascalCasedName",
+      "valueTransform": "PascalCased"
     }
   },
   "forms": {
     "snake_cased": {
-        "identifier": "chain",
-        "steps": ["underscoreBetweenLowercaseAndUpperCaseLetter", "lowerCase"]
+      "identifier": "chain",
+      "steps": ["underscoreBetweenLowercaseAndUpperCaseLetter", "lowerCase"]
     },
     "kebab-cased": {
-        "identifier": "chain",
-        "steps": ["hyphenBetweenLowercaseAndUpperCaseLetter", "lowerCase"]
+      "identifier": "chain",
+      "steps": ["hyphenBetweenLowercaseAndUpperCaseLetter", "lowerCase"]
+    },
+    "PascalCased": {
+      "identifier": "chain",
+      "steps": []
     },
     "underscoreBetweenLowercaseAndUpperCaseLetter": {
       "identifier": "replace",
@@ -54,6 +66,24 @@
         "identifier": "replace",
         "pattern": "([a-z])([A-Z])",
         "replacement": "$1-$2"
+    },
+    "underscoresToSpaces": {
+      "identifier": "replace",
+      "pattern": "_",
+      "replacement": " "
+    },
+    "hyphensToSpaces": {
+        "identifier": "replace",
+        "pattern": "-",
+        "replacement": " "
+    },
+    "removeSpaces": {
+        "identifier": "replace",
+        "pattern": " ",
+        "replacement": ""
+    },
+    "titleCased": {
+      "identifier": "titleCase"
     },
     "lowerCased": {
         "identifier": "lowerCase"

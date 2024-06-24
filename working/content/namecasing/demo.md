@@ -2,6 +2,9 @@
 
 This is a demo to show how the name parameter can be cased with different styles.
 
-- Original: OriginalName
-- snake_case: name_as_snake_case
-- kebab-case: name-as-kebab-case
+# PascalCasedName
+
+- Original: OriginalPascalCasedName
+- snake_case: pascal_cased_name_as_snake_case
+- kebab-case: pascal-cased-name-as-kebab-case
+- PascalCase: PascalCasedNameAsPascalCase
