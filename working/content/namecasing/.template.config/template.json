@@ -113,46 +113,196 @@
   "forms": {
     "snake_cased": {
       "identifier": "chain",
-      "steps": []
+      "steps": ["underscoreBetweenLowerCaseAndUpperCaseLetter", "hyphensToUnderscores", "lowerCase"]
     },
     "kebab-cased": {
       "identifier": "chain",
-      "steps": []
+      "steps": ["hyphenBetweenLowerCaseAndUpperCaseLetter", "underscoresToHyphens", "lowerCase"]
     },
     "PascalCased": {
       "identifier": "chain",
-      "steps": []
+      "steps": ["firstUpperCase", "separatorLowerCaseToUpperCase"]
     },
-    "underscoreBetweenLowercaseAndUpperCaseLetter": {
+    "underscoreBetweenLowerCaseAndUpperCaseLetter": {
       "identifier": "replace",
       "pattern": "([a-z])([A-Z])",
       "replacement": "$1_$2"
     },
-    "hyphenBetweenLowercaseAndUpperCaseLetter": {
+    "hyphenBetweenLowerCaseAndUpperCaseLetter": {
         "identifier": "replace",
         "pattern": "([a-z])([A-Z])",
         "replacement": "$1-$2"
     },
-    "underscoresToSpaces": {
+    "underscoresToHyphens": {
       "identifier": "replace",
       "pattern": "_",
-      "replacement": " "
+      "replacement": "-"
     },
-    "hyphensToSpaces": {
+    "hyphensToUnderscores": {
         "identifier": "replace",
         "pattern": "-",
-        "replacement": " "
+        "replacement": "_"
     },
-    "removeSpaces": {
+    "separatorLowerCaseToUpperCase": {
+      "identifier": "chain",
+      "steps": [
+        "separatorAToUpperCase",
+        "separatorBToUpperCase",
+        "separatorCToUpperCase",
+        "separatorDToUpperCase",
+        "separatorEToUpperCase",
+        "separatorFToUpperCase",
+        "separatorGToUpperCase",
+        "separatorHToUpperCase",
+        "separatorIToUpperCase",
+        "separatorJToUpperCase",
+        "separatorKToUpperCase",
+        "separatorLToUpperCase",
+        "separatorMToUpperCase",
+        "separatorNToUpperCase",
+        "separatorOToUpperCase",
+        "separatorPToUpperCase",
+        "separatorQToUpperCase",
+        "separatorRToUpperCase",
+        "separatorSToUpperCase",
+        "separatorTToUpperCase",
+        "separatorUToUpperCase",
+        "separatorVToUpperCase",
+        "separatorWToUpperCase",
+        "separatorXToUpperCase",
+        "separatorYToUpperCase",
+        "separatorZToUpperCase"
+      ]
+    },
+    "separatorAToUpperCase": {
         "identifier": "replace",
-        "pattern": " ",
-        "replacement": ""
+        "pattern": "[-_]a",
+        "replacement": "A"
     },
-    "titleCased": {
-      "identifier": "titleCase"
+    "separatorBToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]b",
+        "replacement": "B"
     },
-    "lowerCased": {
-        "identifier": "lowerCase"
-    }    
+    "separatorCToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]c",
+        "replacement": "C"
+    },
+    "separatorDToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]d",
+        "replacement": "D"
+    },
+    "separatorEToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]e",
+        "replacement": "E"
+    },
+    "separatorFToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]f",
+        "replacement": "F"
+    },
+    "separatorGToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]g",
+        "replacement": "G"
+    },
+    "separatorHToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]h",
+        "replacement": "H"
+    },
+    "separatorIToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]i",
+        "replacement": "I"
+    },
+    "separatorJToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]j",
+        "replacement": "J"
+    },
+    "separatorKToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]k",
+        "replacement": "K"
+    },
+    "separatorLToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]l",
+        "replacement": "L"
+    },
+    "separatorMToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]m",
+        "replacement": "M"
+    },
+    "separatorNToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]n",
+        "replacement": "N"
+    },
+    "separatorOToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]o",
+        "replacement": "O"
+    },
+    "separatorPToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]p",
+        "replacement": "P"
+    },
+    "separatorQToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]q",
+        "replacement": "Q"
+    },
+    "separatorRToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]r",
+        "replacement": "R"
+    },
+    "separatorSToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]s",
+        "replacement": "S"
+    },
+    "separatorTToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]t",
+        "replacement": "T"
+    },
+    "separatorUToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]u",
+        "replacement": "U"
+    },
+    "separatorVToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]v",
+        "replacement": "V"
+    },
+    "separatorWToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]w",
+        "replacement": "W"
+    },
+    "separatorXToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]x",
+        "replacement": "X"
+    },
+    "separatorYToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]y",
+        "replacement": "Y"
+    },
+    "separatorZToUpperCase": {
+        "identifier": "replace",
+        "pattern": "[-_]z",
+        "replacement": "Z"
+    }
   }
 }
