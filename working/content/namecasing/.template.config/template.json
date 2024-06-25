@@ -23,7 +23,7 @@
       "replaces": "pascal_cased_name_as_snake_case",
       "type": "derived",
       "valueSource": "PascalCasedName",
-      "valueTransform": "snake_cased"
+      "valueTransform": "snake_case"
     },
     "PascalCasedNameAsKebabCaseReplacement": {
       "datatype": "text",
@@ -32,7 +32,7 @@
       "replaces": "pascal-cased-name-as-kebab-case",
       "type": "derived",
       "valueSource": "PascalCasedName",
-      "valueTransform": "kebab-cased"
+      "valueTransform": "kebab-case"
     },
     "PascalCasedNameAsPascalCaseReplacement": {
       "datatype": "text",
@@ -41,7 +41,7 @@
       "replaces": "PascalCasedNameAsPascalCase",
       "type": "derived",
       "valueSource": "PascalCasedName",
-      "valueTransform": "PascalCased"
+      "valueTransform": "PascalCase"
     },
     "SnakeCasedName": {
       "datatype": "text",
@@ -56,7 +56,7 @@
       "replaces": "snake_cased_name_as_snake_case",
       "type": "derived",
       "valueSource": "SnakeCasedName",
-      "valueTransform": "snake_cased"
+      "valueTransform": "snake_case"
     },
     "SnakeCasedNameAsKebabCaseReplacement": {
       "datatype": "text",
@@ -65,7 +65,7 @@
       "replaces": "snake-cased-name-as-kebab-case",
       "type": "derived",
       "valueSource": "SnakeCasedName",
-      "valueTransform": "kebab-cased"
+      "valueTransform": "kebab-case"
     },
     "SnakeCasedNameAsPascalCaseReplacement": {
       "datatype": "text",
@@ -74,7 +74,7 @@
       "replaces": "SnakeCasedNameAsPascalCase",
       "type": "derived",
       "valueSource": "SnakeCasedName",
-      "valueTransform": "PascalCased"
+      "valueTransform": "PascalCase"
     },
     "KebabCasedName": {
       "datatype": "text",
@@ -89,7 +89,7 @@
       "replaces": "kebab_cased_name_as_snake_case",
       "type": "derived",
       "valueSource": "KebabCasedName",
-      "valueTransform": "snake_cased"
+      "valueTransform": "snake_case"
     },
     "KebabCasedNameAsKebabCaseReplacement": {
       "datatype": "text",
@@ -98,7 +98,7 @@
       "replaces": "kebab-cased-name-as-kebab-case",
       "type": "derived",
       "valueSource": "KebabCasedName",
-      "valueTransform": "kebab-cased"
+      "valueTransform": "kebab-case"
     },
     "KebabCasedNameAsPascalCaseReplacement": {
       "datatype": "text",
@@ -107,11 +107,11 @@
       "replaces": "KebabCasedNameAsPascalCase",
       "type": "derived",
       "valueSource": "KebabCasedName",
-      "valueTransform": "PascalCased"
+      "valueTransform": "PascalCase"
     }
   },
   "forms": {
-    "snake_cased": {
+    "snake_case": {
       "identifier": "chain",
       "steps": [
         "underscoreBetweenLowerCaseAndUpperCaseLetter",
@@ -119,7 +119,7 @@
         "lowerCase"
       ]
     },
-    "kebab-cased": {
+    "kebab-case": {
       "identifier": "chain",
       "steps": [
         "hyphenBetweenLowerCaseAndUpperCaseLetter",
@@ -127,7 +127,7 @@
         "lowerCase"
       ]
     },
-    "PascalCased": {
+    "PascalCase": {
       "identifier": "chain",
       "steps": ["firstUpperCase", "separatorLowerCaseToUpperCase"]
     },
