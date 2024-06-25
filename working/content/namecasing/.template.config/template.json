@@ -16,7 +16,7 @@
       "replaces": "OriginalPascalCasedName",
       "type": "parameter"
     },
-    "PascalCasedNameAsSnakeCase": {
+    "PascalCasedNameAsSnakeCaseReplacement": {
       "datatype": "text",
       "description": "The name in snake_case",
       "fileRename": "pascal_cased_name_as_snake_case",
@@ -25,7 +25,7 @@
       "valueSource": "PascalCasedName",
       "valueTransform": "snake_cased"
     },
-    "PascalCasedNameAsKebabCase": {
+    "PascalCasedNameAsKebabCaseReplacement": {
       "datatype": "text",
       "description": "The name in kebab-case",
       "fileRename": "pascal-cased-name-as-kebab-case",
@@ -34,7 +34,7 @@
       "valueSource": "PascalCasedName",
       "valueTransform": "kebab-cased"
     },
-    "PascalCasedNameAsPascalCase": {
+    "PascalCasedNameAsPascalCaseReplacement": {
       "datatype": "text",
       "description": "The name in PascalCase",
       "fileRename": "PascalCasedNameAsPascalCase",
@@ -49,7 +49,7 @@
       "replaces": "OriginalSnakeCasedName",
       "type": "parameter"
     },
-    "SnakeCasedNameAsSnakeCase": {
+    "SnakeCasedNameAsSnakeCaseReplacement": {
       "datatype": "text",
       "description": "The name in snake_case",
       "fileRename": "snake_cased_name_as_snake_case",
@@ -58,7 +58,7 @@
       "valueSource": "SnakeCasedName",
       "valueTransform": "snake_cased"
     },
-    "SnakeCasedNameAsKebabCase": {
+    "SnakeCasedNameAsKebabCaseReplacement": {
       "datatype": "text",
       "description": "The name in kebab-case",
       "fileRename": "snake-cased-name-as-kebab-case",
@@ -67,7 +67,7 @@
       "valueSource": "SnakeCasedName",
       "valueTransform": "kebab-cased"
     },
-    "SnakeCasedNameAsPascalCase": {
+    "SnakeCasedNameAsPascalCaseReplacement": {
       "datatype": "text",
       "description": "The name in PascalCase",
       "fileRename": "SnakeCasedNameAsPascalCase",
@@ -82,7 +82,7 @@
       "replaces": "OriginalKebabCasedName",
       "type": "parameter"
     },
-    "KebabCasedNameAsSnakeCase": {
+    "KebabCasedNameAsSnakeCaseReplacement": {
       "datatype": "text",
       "description": "The name in snake_case",
       "fileRename": "kebab_cased_name_as_snake_case",
@@ -91,7 +91,7 @@
       "valueSource": "KebabCasedName",
       "valueTransform": "snake_cased"
     },
-    "KebabCasedNameAsKebabCase": {
+    "KebabCasedNameAsKebabCaseReplacement": {
       "datatype": "text",
       "description": "The name in kebab-case",
       "fileRename": "kebab-cased-name-as-kebab-case",
@@ -100,7 +100,7 @@
       "valueSource": "KebabCasedName",
       "valueTransform": "kebab-cased"
     },
-    "KebabCasedNameAsPascalCase": {
+    "KebabCasedNameAsPascalCaseReplacement": {
       "datatype": "text",
       "description": "The name in PascalCase",
       "fileRename": "KebabCasedNameAsPascalCase",
@@ -113,11 +113,19 @@
   "forms": {
     "snake_cased": {
       "identifier": "chain",
-      "steps": ["underscoreBetweenLowerCaseAndUpperCaseLetter", "hyphensToUnderscores", "lowerCase"]
+      "steps": [
+        "underscoreBetweenLowerCaseAndUpperCaseLetter",
+        "hyphensToUnderscores",
+        "lowerCase"
+      ]
     },
     "kebab-cased": {
       "identifier": "chain",
-      "steps": ["hyphenBetweenLowerCaseAndUpperCaseLetter", "underscoresToHyphens", "lowerCase"]
+      "steps": [
+        "hyphenBetweenLowerCaseAndUpperCaseLetter",
+        "underscoresToHyphens",
+        "lowerCase"
+      ]
     },
     "PascalCased": {
       "identifier": "chain",
@@ -129,9 +137,9 @@
       "replacement": "$1_$2"
     },
     "hyphenBetweenLowerCaseAndUpperCaseLetter": {
-        "identifier": "replace",
-        "pattern": "([a-z])([A-Z])",
-        "replacement": "$1-$2"
+      "identifier": "replace",
+      "pattern": "([a-z])([A-Z])",
+      "replacement": "$1-$2"
     },
     "underscoresToHyphens": {
       "identifier": "replace",
@@ -139,9 +147,9 @@
       "replacement": "-"
     },
     "hyphensToUnderscores": {
-        "identifier": "replace",
-        "pattern": "-",
-        "replacement": "_"
+      "identifier": "replace",
+      "pattern": "-",
+      "replacement": "_"
     },
     "separatorLowerCaseToUpperCase": {
       "identifier": "chain",
@@ -175,134 +183,134 @@
       ]
     },
     "separatorAToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]a",
-        "replacement": "A"
+      "identifier": "replace",
+      "pattern": "[-_]a",
+      "replacement": "A"
     },
     "separatorBToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]b",
-        "replacement": "B"
+      "identifier": "replace",
+      "pattern": "[-_]b",
+      "replacement": "B"
     },
     "separatorCToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]c",
-        "replacement": "C"
+      "identifier": "replace",
+      "pattern": "[-_]c",
+      "replacement": "C"
     },
     "separatorDToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]d",
-        "replacement": "D"
+      "identifier": "replace",
+      "pattern": "[-_]d",
+      "replacement": "D"
     },
     "separatorEToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]e",
-        "replacement": "E"
+      "identifier": "replace",
+      "pattern": "[-_]e",
+      "replacement": "E"
     },
     "separatorFToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]f",
-        "replacement": "F"
+      "identifier": "replace",
+      "pattern": "[-_]f",
+      "replacement": "F"
     },
     "separatorGToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]g",
-        "replacement": "G"
+      "identifier": "replace",
+      "pattern": "[-_]g",
+      "replacement": "G"
     },
     "separatorHToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]h",
-        "replacement": "H"
+      "identifier": "replace",
+      "pattern": "[-_]h",
+      "replacement": "H"
     },
     "separatorIToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]i",
-        "replacement": "I"
+      "identifier": "replace",
+      "pattern": "[-_]i",
+      "replacement": "I"
     },
     "separatorJToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]j",
-        "replacement": "J"
+      "identifier": "replace",
+      "pattern": "[-_]j",
+      "replacement": "J"
     },
     "separatorKToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]k",
-        "replacement": "K"
+      "identifier": "replace",
+      "pattern": "[-_]k",
+      "replacement": "K"
     },
     "separatorLToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]l",
-        "replacement": "L"
+      "identifier": "replace",
+      "pattern": "[-_]l",
+      "replacement": "L"
     },
     "separatorMToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]m",
-        "replacement": "M"
+      "identifier": "replace",
+      "pattern": "[-_]m",
+      "replacement": "M"
     },
     "separatorNToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]n",
-        "replacement": "N"
+      "identifier": "replace",
+      "pattern": "[-_]n",
+      "replacement": "N"
     },
     "separatorOToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]o",
-        "replacement": "O"
+      "identifier": "replace",
+      "pattern": "[-_]o",
+      "replacement": "O"
     },
     "separatorPToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]p",
-        "replacement": "P"
+      "identifier": "replace",
+      "pattern": "[-_]p",
+      "replacement": "P"
     },
     "separatorQToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]q",
-        "replacement": "Q"
+      "identifier": "replace",
+      "pattern": "[-_]q",
+      "replacement": "Q"
     },
     "separatorRToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]r",
-        "replacement": "R"
+      "identifier": "replace",
+      "pattern": "[-_]r",
+      "replacement": "R"
     },
     "separatorSToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]s",
-        "replacement": "S"
+      "identifier": "replace",
+      "pattern": "[-_]s",
+      "replacement": "S"
     },
     "separatorTToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]t",
-        "replacement": "T"
+      "identifier": "replace",
+      "pattern": "[-_]t",
+      "replacement": "T"
     },
     "separatorUToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]u",
-        "replacement": "U"
+      "identifier": "replace",
+      "pattern": "[-_]u",
+      "replacement": "U"
     },
     "separatorVToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]v",
-        "replacement": "V"
+      "identifier": "replace",
+      "pattern": "[-_]v",
+      "replacement": "V"
     },
     "separatorWToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]w",
-        "replacement": "W"
+      "identifier": "replace",
+      "pattern": "[-_]w",
+      "replacement": "W"
     },
     "separatorXToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]x",
-        "replacement": "X"
+      "identifier": "replace",
+      "pattern": "[-_]x",
+      "replacement": "X"
     },
     "separatorYToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]y",
-        "replacement": "Y"
+      "identifier": "replace",
+      "pattern": "[-_]y",
+      "replacement": "Y"
     },
     "separatorZToUpperCase": {
-        "identifier": "replace",
-        "pattern": "[-_]z",
-        "replacement": "Z"
+      "identifier": "replace",
+      "pattern": "[-_]z",
+      "replacement": "Z"
     }
   }
 }
