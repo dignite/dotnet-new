@@ -113,6 +113,7 @@
   "forms": {
     "snake_case": {
       "identifier": "chain",
+      "description": "Converts the name to snake_case. Can handle snake_case, kebab-case, and PascalCase input.",
       "steps": [
         "underscoreBetweenLowerCaseAndUpperCaseLetter",
         "hyphensToUnderscores",
@@ -121,6 +122,7 @@
     },
     "kebab-case": {
       "identifier": "chain",
+      "description": "Converts the name to kebab-case. Can handle snake_case, kebab-case, and PascalCase input.",
       "steps": [
         "hyphenBetweenLowerCaseAndUpperCaseLetter",
         "underscoresToHyphens",
@@ -129,6 +131,7 @@
     },
     "PascalCase": {
       "identifier": "chain",
+      "description": "Converts the name to PascalCase. Can handle snake_case, kebab-case, and PascalCase input.",
       "steps": ["firstUpperCase", "separatorLowerCaseToUpperCase"]
     },
     "underscoreBetweenLowerCaseAndUpperCaseLetter": {
